@@ -16,6 +16,12 @@ class Bottles
     VERSE
   end
 
+  def verses(start_n, end_n)
+    start_n.downto(end_n).map do |verse_number|
+      verse(verse_number)
+    end.join("\n")
+  end
+
   private
 
   def plural?(num)
